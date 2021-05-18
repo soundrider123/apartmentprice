@@ -1,0 +1,58 @@
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{"NSKKEG":19,"PAKUWL":25,"ZJXZCO":16}'}
+  name: column_panel_1
+  layout_properties: {grid_position: 'YAIDKV,ADUTDT'}
+  components:
+  - type: DropDown
+    properties: {}
+    name: drop_down_location
+    layout_properties: {grid_position: 'ZDKUWG,PAKUWL'}
+  - type: Spacer
+    properties: {height: 32}
+    name: spacer_1
+    layout_properties: {grid_position: 'ZDKUWG,NSKKEG'}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: харах, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: button_filter
+    layout_properties: {grid_position: 'ZDKUWG,ZJXZCO'}
+    event_bindings: {click: button_filter_click}
+- type: FlowPanel
+  properties: {}
+  name: flow_panel_1
+  layout_properties: {grid_position: 'ALHQWI,MUJNZM'}
+  components:
+  - type: DataGrid
+    properties:
+      role: null
+      columns:
+      - {title: Нийт үнэ /сая, id: QEIBDS, data_key: price}
+      - {title: Нийтэлсэн, id: AKMAIT, data_key: ognoo}
+      - {id: SAJAXF, title: Талбай /м², data_key: talbai}
+      - {id: SAWEBH, title: Цонхны тоо, data_key: tsonhnii_too}
+      - {id: DKPYIG, title: Ашигл.орсон, data_key: ashiglalt_on}
+      - {id: YPIEGC, title: Хэдэн давхарт, data_key: heden_davhart}
+      auto_header: true
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 5
+      visible: true
+      show_page_controls: true
+      spacing_above: small
+      spacing_below: small
+      background: ''
+    name: data_grid_1
+    layout_properties: {width: 744}
+    components:
+    - type: RepeatingPanel
+      properties: {spacing_above: none, spacing_below: none, item_template: RowTemplate2}
+      name: repeating_panel_1
+      layout_properties: {}
+container:
+  type: ColumnPanel
+  properties: {col_widths: '{}'}
+  event_bindings: {}

@@ -1,0 +1,63 @@
+scheduled_tasks:
+- task_name: scheduled_task
+  time_spec:
+    n: 1
+    every: day
+    at: {hour: 1, minute: 0}
+  job_id: YVVYRCUO
+dependencies: []
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}
+package_name: SalePrediction
+allow_embedding: false
+name: ApartmentPrice
+runtime_options: {version: 2, client_version: '3', server_version: python3-full}
+metadata: {}
+startup_form: Main_Form
+native_deps: {head_html: ''}
+db_schema:
+- name: lookupdata
+  id: 90092
+  python_name: lookupdata
+  columns:
+    HwRezMGxYlU=:
+      name: filename
+      type: string
+      admin_ui: {order: 0, width: 200}
+    u4oMxo35iMI=:
+      name: datadict
+      type: simpleObject
+      admin_ui: {order: 1, width: 200}
+  access: {python_name: lookupdata, app_id: Q2RP2L5GSSNWRSMC, server: full, client: none,
+    table_mapping_name: null, table_mapping_id: null, table_id: 90092}
+- name: datafile
+  id: 89100
+  python_name: datafile
+  columns:
+    ExYig0feNFA=:
+      name: filemedia
+      type: media
+      admin_ui: {order: 1, width: 200}
+    prTMe3sjbbE=:
+      name: filename
+      type: string
+      admin_ui: {order: 0, width: 200}
+  access: {python_name: datafile, app_id: Q2RP2L5GSSNWRSMC, server: full, client: none,
+    table_mapping_name: null, table_mapping_id: null, table_id: 89100}
+- name: modelfile
+  id: 89192
+  python_name: modelfile
+  columns:
+    0bvMkzv97Qs=:
+      name: filemedia
+      type: media
+      admin_ui: {order: 1, width: 200}
+    orVpIToW2B0=:
+      name: filename
+      type: string
+      admin_ui: {order: 0, width: 200}
+  access: {python_name: modelfile, app_id: Q2RP2L5GSSNWRSMC, server: full, client: none,
+    table_mapping_name: null, table_mapping_id: null, table_id: 89192}
+renamed: true
